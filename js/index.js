@@ -9,6 +9,10 @@ import responsiveT from "./responsive_teste.js";
 import device from "./user_agent.js";
 import networkStatus from "./deteccion_red.js";
 import DeteccionWebCam from "./webcam.js";
+import Location from "./Geolocalizacion.js";
+import searchFilter from "./filtro.js";
+import draw from "./sorteo.js";
+import slider from "./slider.js";
 
 
 const d = document;
@@ -25,7 +29,10 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     responsiveT("responsive-tester");
     device("user-device");
     DeteccionWebCam("webcam");
-
+    Location("geolocation");
+    searchFilter(".card-filter", ".card");
+    draw("#winner-btn", ".player")
+    slider();
 })
 
 
