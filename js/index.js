@@ -8,6 +8,7 @@ import responsiveD from "./responsive.js";
 import responsiveT from "./responsive_teste.js";
 import device from "./user_agent.js";
 import networkStatus from "./deteccion_red.js";
+import DeteccionWebCam from "./webcam.js";
 
 
 const d = document;
@@ -23,6 +24,7 @@ d.addEventListener("DOMContentLoaded", (e)=>{
     responsiveD("gmaps","(min-width:1024px)","Estoy en tlfno","Estoy en pc");
     responsiveT("responsive-tester");
     device("user-device");
+    DeteccionWebCam("webcam");
 
 })
 
