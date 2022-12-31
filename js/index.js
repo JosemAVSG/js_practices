@@ -2,7 +2,7 @@ import scrollTop from "./btn_scroll.js";
 import hamburger from "./hamburgerbtn.js";
 import { digitalClock, alarm} from "./reloj.js";
 import {moverPelota,shorcuts } from "./teclado.js";
-import { cuenta } from "./cuenta_regresiva.js";
+import cuenta  from "./cuenta_regresiva.js";
 import darkTheme from "./darkmode.js";
 import responsiveD from "./responsive.js";
 import responsiveT from "./responsive_teste.js";

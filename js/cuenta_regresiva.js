@@ -6,13 +6,13 @@ let tempo;
 
 
 
-export function cuenta(clock, limitDate, mensaje) {
+export default function cuenta(clock, limitDate, mensaje) {
 
     const $reloj = d.getElementById(clock),
 
     $form=d.getElementById(limitDate);
 
-  
+ 
 
    d.addEventListener("submit", (e)=>{
   
@@ -20,28 +20,29 @@ export function cuenta(clock, limitDate, mensaje) {
     if (e.target===$form) {
 
         e.preventDefault();
+
         
-      
         
-  
     
-     tempo= setInterval(()=>{
+     tempo = setInterval(()=>{
         
-       let f= $form.fechah.value;
-
-        let limite= new Date(f).getTime();
-
+       const f= $form.fechah.value;
+              console.log(f);
+                
+             let limite= new Date(f).getTime();
+            
+             
         let now=new Date().getTime();
 
         let hora = limite-now,
 
-        dias= Math.floor( hora/(1000*60*60*24)),
+        dias= Math.floor(hora/(1000*60*60*24)),
         horas= ("0"+ Math.floor( hora%(1000*60*60*24)/(1000*60*60))).slice(-2),
         minutos=("0"+ Math.floor( hora%(1000*60*60)/(1000*60))).slice(-2),
         segundos=("0"+ Math.floor( hora%(1000*60)/(1000))).slice(-2);
     
            
-        $reloj.innerHTML = `<h3>faltan ${dias}, dias ${horas},horas  ${minutos},minutos  ${segundos}segundos</h3>`;
+        $reloj.innerHTML = `<h3>faltan ${dias}, dias ${horas} horas  ${minutos},minutos  ${segundos}, segundos</h3>`;
        
 
     },1000);
